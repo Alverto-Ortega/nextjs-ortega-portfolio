@@ -46,14 +46,15 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+            Projects presented are a mixture of Personal and Work-based.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
-
+{/* first-half of the "projects" page to contain emphasized projects */}
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
             <Link href={`/projects/${featured.slug}`}>
+              <h3 className="ml-5 text-xs text-violet-700">{featured.tags}</h3>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -96,40 +97,50 @@ export default async function ProjectsPage() {
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
             {[top2, top3].map((project) => (
               <Card key={project.slug}>
+                <h3 className="ml-5 text-xs text-violet-700">{project.tags}</h3>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>
             ))}
           </div>
         </div>
         <div className="hidden w-full h-px md:block bg-zinc-800" />
-
+{/* second-half of the "projects" page to contain other projects */}
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 0)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
-                </Card>
-              ))}
+          <div>
+            <h2 className="text-violet-700">Front-end Projects</h2>
+            <div className="grid grid-cols-1 gap-4">
+              {sorted
+                .filter(project => project.tags?.includes("front-end"))
+                .map((project) => (
+                  <Card key={project.slug}>
+                    <Article project={project} views={views[project.slug] ?? 0} />
+                  </Card>
+                ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 1)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
-                </Card>
-              ))}
+          <div>
+            <h2 className="text-violet-700">Back-end Projects</h2>
+            <div className="grid grid-cols-1 gap-4">
+              {sorted
+                .filter(project => project.tags?.includes("back-end"))
+                .map((project) => (
+                  <Card key={project.slug}>
+                    <Article project={project} views={views[project.slug] ?? 0} />
+                  </Card>
+                ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 2)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
-                </Card>
-              ))}
+          <div>
+            <h2 className="text-violet-700">Full-stack Projects</h2>
+            <div className="grid grid-cols-1 gap-4">
+              {sorted
+                .filter(project => project.tags?.includes("full-stack"))
+                .map((project) => (
+                  <Card key={project.slug}>
+                    <Article project={project} views={views[project.slug] ?? 0} />
+                  </Card>
+                ))}
+            </div>
           </div>
         </div>
       </div>

@@ -6,26 +6,26 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
+    default: "Ortega's Portfolio",
     template: "%s | chronark.com",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
-  openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
-    images: [
-      {
-        url: "https://chronark.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
-  },
+  description: "My personal portfolio page showcasing my Coded projects",
+  // openGraph: {
+  //   title: "chronark.com",
+  //   description:
+  //     "Co-founder of unkey.dev and founder of planetfall.io",
+  //   url: "https://chronark.com",
+  //   siteName: "chronark.com",
+  //   images: [
+  //     {
+  //       url: "https://chronark.com/og.png",
+  //       width: 1920,
+  //       height: 1080,
+  //     },
+  //   ],
+  //   locale: "en-US",
+  //   type: "website",
+  // },
   robots: {
     index: true,
     follow: true,
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
-  },
+  // twitter: {
+  //   title: "Chronark",
+  //   card: "summary_large_image",
+  // },
   icons: {
     shortcut: "/favicon.png",
   },
