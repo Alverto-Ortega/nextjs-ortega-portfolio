@@ -1,5 +1,6 @@
 <div align="center">
-    <a href="https://chronark.com"><h1 align="center">Alverto Ortega's Portfolio - Nextjs Web Site</h1></a>
+    <h1>Alverto Ortega's Portfolio - Nextjs Web Site</h1>
+    <h3>Sorry, page is currently under construction. Updating soon!<3</h3>
 
 My personal portfolio website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com?ref=chronark.com), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Vercel](https://vercel.com/).
 
